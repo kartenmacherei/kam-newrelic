@@ -1,4 +1,6 @@
 #KAM-NEWRELIC
+![build](https://travis-ci.org/kartenmacherei/kam-newrelic.svg?branch=master)
+
 This package encapsulate setting up application and transaction names for NewRelic agent
 
 ##USAGE
