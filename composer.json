@@ -1,5 +1,16 @@
 {
   "name": "kartenmacherei/kam-newrelic",
+  "description": "Wrapper around functions for setting newrelic appname ant transaction name",
+  "type": "library",
+  "keywords": ["newrelic", "transaction"],
+  "homepage": "https://github.com/kartenmacherei/kam-newrelic",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mihailo Gajic",
+      "email": "mihailo.gajic@kartenmacherei.de"
+    }
+  ],
   "autoload": {
     "psr-4": {
       "Kartenmacherei\\NewRelic\\": "src/"
