@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
  */
 class NewRelicDummyAgentTest extends TestCase
 {
-    public function testNameTransaction(): void
+    public function testNameTransaction()
     {
         $dummyAgent = new NewRelicDummyAgent();
         $this->assertNull($dummyAgent->nameTransaction('foo'));

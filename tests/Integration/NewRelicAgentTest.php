@@ -13,7 +13,7 @@ use PHPUnit\Framework\TestCase;
  */
 class NewRelicAgentTest extends TestCase
 {
-    public function testConstructorThrowsExceptionWhenExtensionIsNotInstalled(): void
+    public function testConstructorThrowsExceptionWhenExtensionIsNotInstalled()
     {
         $this->expectException(EnsureAgentExtensionIsLoadedException::class);
         $this->expectExceptionMessage('PHP extension "newrelic" is not loaded');

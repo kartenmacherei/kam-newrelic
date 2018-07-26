@@ -7,7 +7,7 @@ use Kartenmacherei\NewRelic\Ensureance\Exception\EnsureNotEmptyStringException;
 
 trait EnsureIsNotEmptyStringTrait
 {
-    private function ensureIsNotEmptyString(string $string, string $name): void
+    private function ensureIsNotEmptyString(string $string, string $name)
     {
         if ('' === $string) {
             $message = sprintf('Expected "%s" to not be empty', $name);

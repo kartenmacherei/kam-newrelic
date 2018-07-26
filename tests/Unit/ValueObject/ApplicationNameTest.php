@@ -12,7 +12,7 @@ use PHPUnit\Framework\TestCase;
  */
 class ApplicationNameTest extends TestCase
 {
-    public function testAsString(): void
+    public function testAsString()
     {
         $expectedApplicationNameValue = 'foo';
         $applicationName = new ApplicationName($expectedApplicationNameValue);
@@ -20,7 +20,7 @@ class ApplicationNameTest extends TestCase
         $this->assertSame($expectedApplicationNameValue, $applicationName->asString());
     }
 
-    public function testCreationWithEmptyString(): void
+    public function testCreationWithEmptyString()
     {
         $this->expectException(EnsureNotEmptyStringException::class);
         $this->expectExceptionMessage('Expected "application name" to not be empty');

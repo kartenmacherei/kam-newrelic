@@ -12,7 +12,7 @@ use PHPUnit\Framework\TestCase;
  */
 class TransactionNameTest extends TestCase
 {
-    public function testAsString(): void
+    public function testAsString()
     {
         $expectedTransactionNameValue = 'foo';
         $transactionName = new TransactionName($expectedTransactionNameValue);
@@ -20,7 +20,7 @@ class TransactionNameTest extends TestCase
         $this->assertSame($expectedTransactionNameValue, $transactionName->asString());
     }
 
-    public function testCreationWithEmptyString(): void
+    public function testCreationWithEmptyString()
     {
         $this->expectException(EnsureNotEmptyStringException::class);
         $this->expectExceptionMessage('Expected "transaction name" to not be empty');

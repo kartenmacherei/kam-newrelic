@@ -14,12 +14,12 @@ class EnsureAgentExtensionIsLoadedTraitTest extends TestCase
 {
     use EnsureAgentExtensionIsLoadedTrait;
 
-    public function testIsNewRelicExtensionLoaded(): void
+    public function testIsNewRelicExtensionLoaded()
     {
         $this->assertFalse($this->isNewRelicExtensionLoaded());
     }
 
-    public function testEnsureAgentExtensionIsLoadedThrowsExpectedException(): void
+    public function testEnsureAgentExtensionIsLoadedThrowsExpectedException()
     {
         $this->expectException(EnsureAgentExtensionIsLoadedException::class);
         $this->expectExceptionMessage('PHP extension "newrelic" is not loaded');

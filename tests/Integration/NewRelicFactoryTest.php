@@ -18,14 +18,14 @@ class NewRelicFactoryTest extends TestCase
      */
     private $factory;
 
-    protected function setUp(): void
+    protected function setUp()
     {
         parent::setUp();
 
         $this->factory = new NewRelicFactory();
     }
 
-    public function testCreateNewRelicAgentThrowsException(): void
+    public function testCreateNewRelicAgentThrowsException()
     {
         $this->expectException(EnsureAgentExtensionIsLoadedException::class);
         $this->expectExceptionMessage('PHP extension "newrelic" is not loaded');
@@ -33,7 +33,7 @@ class NewRelicFactoryTest extends TestCase
         $this->factory->createNewRelicAgent('foo');
     }
 
-    public function testCreateNewRelicDummyAgent(): void
+    public function testCreateNewRelicDummyAgent()
     {
         $this->assertInstanceOf(NewRelicDummyAgent::class, $this->factory->createNewRelicDummyAgent());
     }

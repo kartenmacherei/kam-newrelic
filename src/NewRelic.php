@@ -5,5 +5,5 @@ namespace Kartenmacherei\NewRelic;
 
 interface NewRelic
 {
-    public function nameTransaction(string $name): void;
+    public function nameTransaction(string $name);
 }

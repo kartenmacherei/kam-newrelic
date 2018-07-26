@@ -5,7 +5,7 @@ namespace Kartenmacherei\NewRelic;
 
 class NewRelicDummyAgent implements NewRelic
 {
-    public function nameTransaction(string $name): void
+    public function nameTransaction(string $name)
     {
     }
 }

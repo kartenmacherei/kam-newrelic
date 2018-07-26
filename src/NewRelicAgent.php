@@ -21,17 +21,17 @@ class NewRelicAgent implements NewRelic
         $this->setAppName($applicationName);
     }
 
-    public function nameTransaction(string $name): void
+    public function nameTransaction(string $name)
     {
         $this->setTransactionName(new TransactionName($name));
     }
 
-    private function setTransactionName(TransactionName $name): void
+    private function setTransactionName(TransactionName $name)
     {
         newrelic_name_transaction($name->asString());
     }
 
-    private function setAppName(ApplicationName $applicationName): void
+    private function setAppName(ApplicationName $applicationName)
     {
         newrelic_set_appname($applicationName->asString(), '', true);
     }

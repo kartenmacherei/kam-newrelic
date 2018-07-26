@@ -15,7 +15,7 @@ trait EnsureAgentExtensionIsLoadedTrait
      */
     private $extensionName = 'newrelic';
 
-    private function ensureAgentExtensionIsLoaded(): void
+    private function ensureAgentExtensionIsLoaded()
     {
         if (!$this->isNewRelicExtensionLoaded()) {
             $message = sprintf('PHP extension "%s" is not loaded', $this->extensionName);

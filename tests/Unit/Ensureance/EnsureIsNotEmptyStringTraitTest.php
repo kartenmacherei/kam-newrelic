@@ -14,12 +14,12 @@ class EnsureIsNotEmptyStringTraitTest extends TestCase
 {
     use EnsureIsNotEmptyStringTrait;
 
-    public function testEnsureIsNotEmptyStringWithValidParameter(): void
+    public function testEnsureIsNotEmptyStringWithValidParameter()
     {
         $this->assertNull($this->ensureIsNotEmptyString('not-empty', 'name from test'));
     }
 
-    public function testEnsureIsNotEmptyStringThrowsExpectedException(): void
+    public function testEnsureIsNotEmptyStringThrowsExpectedException()
     {
         $this->expectException(EnsureNotEmptyStringException::class);
         $this->expectExceptionMessage('Expected "name from test" to not be empty');
