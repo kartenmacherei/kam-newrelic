@@ -1,0 +1,19 @@
+os:
+- linux
+
+language: php
+
+before_install:
+  - composer self-update
+
+install:
+  - travis_retry composer install --no-interaction --prefer-source
+
+script:
+  - ./vendor/bin/phpunit
+
+php:
+  - 7.1
+
+notifications:
+  email: false
