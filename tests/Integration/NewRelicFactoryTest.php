@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace Kartenmacherei\NewRelic\IntegrationTest;
 
 use Kartenmacherei\NewRelic\Ensureance\Exception\EnsureAgentExtensionIsLoadedException;
-use Kartenmacherei\NewRelic\NewRelicDummyAgent;
+use Kartenmacherei\NewRelic\VoidNewRelicAgent;
 use Kartenmacherei\NewRelic\NewRelicFactory;
 use PHPUnit\Framework\TestCase;
 
@@ -33,8 +33,8 @@ class NewRelicFactoryTest extends TestCase
         $this->factory->createNewRelicAgent('foo');
     }
 
-    public function testCreateNewRelicDummyAgent()
+    public function testCreateVoidNewRelicAgent()
     {
-        $this->assertInstanceOf(NewRelicDummyAgent::class, $this->factory->createNewRelicDummyAgent());
+        $this->assertInstanceOf(VoidNewRelicAgent::class, $this->factory->createVoidNewRelicAgent());
     }
 }

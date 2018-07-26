@@ -15,8 +15,8 @@ class NewRelicFactory
         return new NewRelicAgent(new ApplicationName($appName));
     }
 
-    public function createNewRelicDummyAgent(): NewRelicDummyAgent
+    public function createVoidNewRelicAgent(): VoidNewRelicAgent
     {
-        return new NewRelicDummyAgent();
+        return new VoidNewRelicAgent();
     }
 }
